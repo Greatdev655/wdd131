@@ -89,7 +89,7 @@ main{
     margin-bottom: 30px;
 }
 
-.card h1{
+#about-me-text{
     text-align: center;
     background-color:  rgb(31, 1, 80);
     width: 100%;
