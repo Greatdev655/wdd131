@@ -1,0 +1,41 @@
+@media only screen and (min-width:40em){
+    #menu{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: .75rem;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-list{
+        display: block;
+    }
+
+    .nav a{
+        font-size: 1rem;
+        margin-right: 5px;
+        padding: .5rem;
+    }
+
+    
+
+    .img-container{
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	    grid-gap: 15px;
+	    place-items: center;
+        justify-content: center;
+    }
+
+    figure img{
+        width: 350px;
+        height: 350px;
+    }
+}
