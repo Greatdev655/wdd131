@@ -33,17 +33,27 @@ header h1{
     
 }
 
+.menu-container{
+    display: flex;
+    flex-direction: column;
+}
+
 #menu{
     display: block;
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
     color: #fff;
+    transition: .5s ease-in-out;
 
 }
 
 #menu::before{
     content: "\2630";
+}
+
+#menu:hover{
+    color: black;
 }
 
 .nav{
