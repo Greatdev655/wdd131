@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="a country page that gives firsthand info about a particular place"
+    />
+    <meta name="author" content="Ikechukwu Great" />
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" />
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>country page project - Ikechukwu Great</title>
+  </head>
+  <body>
+    <header>
+      <h1>Nigeria</h1>
+    </header>
+
+    <main>
+      <div class="card_container">
+        <picture>
+          <source
+            media="(min-width: 780px)"
+            srcset="images/countryheroimg.webp"
+          />
+          <img
+            src="images/countrymobileimg.webp"
+            alt="picture of a Nigerian Lady in a Tricycle."
+            class="main-img"
+          />
+        </picture>
+
+        <div class="data_card">
+          <h2>Data:</h2>
+          <p id="population">  </p>
+          <p id="area"></p>
+          <p id="capital"></p>
+          <p id="language"></p>
+          <p id="currency"></p>
+          <p id="time-zone"></p>
+          <p id="internet"></p>
+        </div>
+
+        <div class="weather_card">
+              <h2>Weather:</h2>
+              <img src="images/weather-icon.svg" alt="weather icon"/>
+
+          <p id="temp"></p>
+          <p id="condition"></p>
+          <p id="wind"></p>
+          <p id="wind-chill"></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Copyright © <span id="current-year"></span> Ikechukwu Great. All rights
+        reserved. Last modified <span id="lastModified"></span>
+      </p>
+      &nbsp;
+    </footer>
+  </body>
+</html>
