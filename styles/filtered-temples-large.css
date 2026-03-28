@@ -1,0 +1,52 @@
+@media only screen and (min-width: 40em) {
+  #menu {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .nav a:hover {
+    color: rgb(255, 217, 0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    color: rgb(255, 187, 0);
+    border-radius: 10px;
+    height: 40px;
+  }
+
+  .img-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
+    gap: 15px;
+    padding: 1rem;
+  }
+
+  .temple_card {
+    margin-right: 10px;
+  }
+}
