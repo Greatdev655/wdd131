@@ -31,6 +31,7 @@ main {
         url("../images/herobackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment:scroll;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
