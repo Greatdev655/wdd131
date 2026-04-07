@@ -186,6 +186,29 @@ nav ul li a:hover {
     font-size: .5rem;
   }
 
+  .hero{
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p{
+  font-size: .75rem;
+  max-width: 400px;
+}
+
+.hero_button_field {
+  flex-direction: column;
+}
+
+.hero_button_field button {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
 }
 
 /* Tablet media query  */
