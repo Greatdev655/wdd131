@@ -236,7 +236,7 @@ nav ul li a:hover {
 .hero{
   flex-direction: column;
   background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/herobackground2.webp"); ;
+    url("../images/herobackground.jpg");
 }
 
 .hero h1 {
