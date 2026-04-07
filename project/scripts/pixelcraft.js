@@ -3,6 +3,7 @@ const nav = document.querySelector("nav"); // ✅ defined
 const contactBtn = document.getElementById("contact_btn");
 const portfolioBtn = document.getElementById("portfolio_btn");
 const hamburger = document.querySelector(".hamburger");
+const heroText = document.getElementById("hero_text");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -24,4 +25,41 @@ nav.addEventListener("click", (e) => {
     .querySelectorAll("nav ul li a")
     .forEach((a) => a.classList.remove("active_link"));
   link.classList.add("active_link"); // ✅ matches your CSS class name
+});
+
+// dynamic text animation
+
+const messages = [
+  "Branding, UI/UX, and website design for ambitious businesses.",
+  "We build brands.",
+  "We design websites.",
+  "We grow your business.",
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  let messageIndex = 0;
+  let charIndex = 0;
+
+  function typeEffect() {
+    if (charIndex < messages[messageIndex].length) {
+      heroText.textContent += messages[messageIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 50); // typing speed
+    } else {
+      setTimeout(eraseEffect, 1500); // pause before deleting
+    }
+  }
+
+  function eraseEffect() {
+    if (charIndex > 0) {
+      heroText.textContent = messages[messageIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseEffect, 30);
+    } else {
+      messageIndex = (messageIndex + 1) % messages.length;
+      setTimeout(typeEffect, 300);
+    }
+  }
+
+  typeEffect();
 });
