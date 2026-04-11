@@ -719,6 +719,7 @@
      margin-right: -10px;
    }
 
+
    nav ul {
      display: none;
      flex-direction: column;
@@ -775,6 +776,24 @@
    .stat-number {
      font-size: 1.8rem;
    }
+
+   .team-grid {
+   display: flex;
+   flex-direction: column;
+   gap: 1.25rem;
+   max-width: 1100px;
+   margin: 0 auto;
+ }
+
+ .member-card {
+   background: var(--card-bg);
+   width: 90%;
+   border: 1px solid rgba(255, 255, 255, 0.07);
+   border-radius: 16px;
+   overflow: hidden;
+   transition: all 0.3s ease;
+ }
+
  }
 
  @media screen and (max-width: 480px) {
