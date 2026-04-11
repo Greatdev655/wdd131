@@ -4,6 +4,7 @@ const contactBtn = document.getElementById("contact_btn");
 const portfolioBtn = document.getElementById("portfolio_btn");
 const hamburger = document.querySelector(".hamburger");
 const heroText = document.getElementById("hero_text");
+const learnMoreBtn = document.getElementById("learn_more_btn");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -16,6 +17,10 @@ contactBtn.addEventListener("click", () => {
 
 portfolioBtn.addEventListener("click", () => {
   window.location.href = "portfolio.html";
+});
+
+learnMoreBtn.addEventListener("click", () => {
+  window.location.href = "about.html";
 });
 
 nav.addEventListener("click", (e) => {
