@@ -5,6 +5,15 @@ const portfolioBtn = document.getElementById("portfolio_btn");
 const hamburger = document.querySelector(".hamburger");
 const heroText = document.getElementById("hero_text");
 const learnMoreBtn = document.getElementById("learn_more_btn");
+const contactSubmitBtn = document.getElementById("contact_submit_btn");
+const contactForm = document.getElementById("contact-form");
+const currentYear = document.getElementById("current-year");
+const modifiedData = document.getElementById("lastModified");
+
+const today = new Date();
+
+currentYear.innerHTML = today.getFullYear();
+modifiedData.innerHTML = ` <span class="highlight">${today.toLocaleDateString()}</span>`;
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -32,6 +41,29 @@ nav.addEventListener("click", (e) => {
   link.classList.add("active_link"); // ✅ matches your CSS class name
 });
 
+// contact form submission
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    date: new Date().toLocaleString(),
+  };
+  // get existing submissions from localStorage or initialize an empty array
+  let submissions =
+    JSON.parse(localStorage.getItem("contactSubmissions")) || [];
+  submissions.push(formData);
+
+  // save updated submissions back to localStorage
+  localStorage.setItem("contactSubmissions", JSON.stringify(submissions));
+
+  alert("Thank you for reaching out! We will get back to you soon.");
+
+  // reset form
+  this.closest("form").reset();
+});
 // dynamic text animation
 
 const messages = [

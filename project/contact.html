@@ -1,11 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact PixelCraft Design Agency — let's talk about your project." />
+  <meta name="author" content="Ikechukwu Great" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <script src="scripts/contact.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+  <title>Contact Us — PixelCraft Design Agency</title>
 </head>
+
 <body>
-    
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="logo">
+      <img src="images/pixellogo.png" alt="PixelCraft logo" />
+    </div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="pixelcraft.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active_link">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="contact-hero">
+      <div class="hero-tag">
+        <i class="fa-solid fa-circle-dot" style="font-size:8px;"></i> Get in touch
+      </div>
+      <h1>Let's build something <em>great</em> together</h1>
+      <p>Whether you have a brief, a vague idea, or just a problem to solve — we'd love to hear from you. We reply within 24 hours.</p>
+    </section>
+
+    <!-- ── CONTACT BODY ── -->
+    <section class="contact-section">
+      <div class="contact-inner">
+
+        <!-- LEFT — info cards -->
+        <div class="contact-info">
+
+          <div class="info-intro">
+            <div class="section-tag">Our details</div>
+            <h2 class="section-heading">Find us, call us, <em>reach out</em></h2>
+            <p>We're a remote-first team based in Lagos. You can walk in, call, or just fill out the form — whatever works for you.</p>
+          </div>
+
+          <div class="info-cards">
+
+            <div class="info-card">
+              <div class="info-icon green">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="info-label">Office address</div>
+                <div class="info-value">14 Admiralty Way, Lekki Phase 1<br>Lagos, Nigeria</div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon amber">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="info-label">Phone</div>
+                <div class="info-value">+234 801 234 5678</div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon blue">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="info-label">Email</div>
+                <div class="info-value">hello@pixelcraft.ng</div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon green">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <div class="info-label">Working hours</div>
+                <div class="info-value">Mon – Fri: 9am – 6pm WAT<br>Sat: 10am – 2pm</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- socials -->
+          <div class="social-row">
+            <span class="info-label">Follow us</span>
+            <div class="social-links">
+              <a href="#" class="social-btn" aria-label="Twitter/X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="Behance">
+                <i class="fa-brands fa-behance"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="Dribbble">
+                <i class="fa-brands fa-dribbble"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT — form -->
+        <div class="contact-form-wrap">
+          <div class="form-header">
+            <div class="section-tag">Send a message</div>
+            <h2 class="section-heading">Tell us about your <em>project</em></h2>
+          </div>
+
+          <!-- success banner (hidden by default) -->
+          <div class="form-success" id="form-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Message sent!</strong>
+              <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+
+          <form id="contact-form" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="firstName" placeholder="Adaeze" />
+                <span class="field-error" id="err-first-name"></span>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="lastName" placeholder="Obi" />
+                <span class="field-error" id="err-last-name"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="adaeze@company.com" />
+                <span class="field-error" id="err-email"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Organisation</label>
+              <input type="text" id="company" name="company" placeholder="Your company name (optional)" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service you're interested in <span class="required">*</span></label>
+              <div class="select-wrap">
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option value="branding">Brand Identity</option>
+                  <option value="web">Web Design & Development</option>
+                  <option value="uiux">UI/UX Design</option>
+                  <option value="graphic">Graphic Design</option>
+                  <option value="motion">Motion & Animation</option>
+                  <option value="strategy">Digital Strategy</option>
+                  <option value="other">Other / Not sure yet</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+              </div>
+              <span class="field-error" id="err-service"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Estimated budget</label>
+              <div class="budget-options" id="budget-options">
+                <button type="button" class="budget-btn" data-value="under1k">Under $1k</button>
+                <button type="button" class="budget-btn" data-value="1k-3k">$1k – $3k</button>
+                <button type="button" class="budget-btn" data-value="3k-10k">$3k – $10k</button>
+                <button type="button" class="budget-btn" data-value="10k-plus">$10k+</button>
+                <button type="button" class="budget-btn" data-value="not-sure">Not sure</button>
+              </div>
+              <input type="hidden" id="budget" name="budget" value="" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Project brief <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project — what you need, your timeline, and any other relevant details..."></textarea>
+              <div class="char-count"><span id="char-count">0</span> / 1000</div>
+              <span class="field-error" id="err-message"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <span class="checkbox-custom"></span>
+                Subscribe to our newsletter for design tips and project showcases
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span id="btn-text"><i class="fa-solid fa-paper-plane"></i> Send message</span>
+              <span id="btn-loading" style="display:none;"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq-section">
+      <div class="faq-inner">
+        <div class="faq-header">
+          <div class="section-tag">Before you reach out</div>
+          <h2 class="section-heading">Common <em>questions</em></h2>
+          <p>Quick answers to things most people ask before sending their first message.</p>
+        </div>
+        <div class="faq-list" id="faq-list">
+          <!-- rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MAP PLACEHOLDER ── -->
+    <section class="map-section">
+      <div class="map-inner">
+        <div class="map-placeholder">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p>14 Admiralty Way, Lekki Phase 1, Lagos</p>
+          <a href="https://maps.google.com/?q=Lekki+Phase+1+Lagos" target="_blank" rel="noopener" class="map-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section">
+      <h2>Not ready to fill a form?</h2>
+      <p>Browse our work or read more about us — then come back when you're ready. We'll be here.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" onclick="window.location.href='portfolio.html'">View our portfolio</button>
+        <button class="btn-outline" onclick="window.location.href='about.html'">Learn about us</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Copyright © <span id="current-year"></span>
+      Ikechukwu Great. All rights reserved.
+      Last modified <span id="last-modified"></span>
+    </p>
+  </footer>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-box" id="lightbox-box"></div>
+  </div>
+
 </body>
 </html>

@@ -1,11 +1,482 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore the design services offered by PixelCraft, a creative agency specializing in digital experiences." />
+    <meta name="author" content="Ikechukwu Great" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <script src="scripts/services.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <title>Pixel craft services page</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="images/pixellogo.png" alt="PixelCraft logo" />
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="pixelcraft.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html" class="active_link">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" >Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ── HERO ── -->
+        <section class="services-hero">
+            <div class="hero-tag">
+                <i class="fa-solid fa-circle-dot" style="font-size: 8px"></i> What we
+                offer
+            </div>
+            <h1>Exceptional design services that <em>drive results</em></h1>
+            <p>
+                From brand identity to full digital experiences — we bring the craft,
+                strategy, and technology to make your vision a reality.
+            </p>
+            <div class="hero-btns">
+                <button class="btn-primary" onclick="window.location.href = 'contact.html'">
+                    Start a project
+                </button>
+                <button class="btn-outline" onclick="window.location.href = 'portfolio.html'">
+                    View our work
+                </button>
+            </div>
+        </section>
+
+        <!-- ── SERVICES GRID ── -->
+        <section class="services-section">
+            <div class="section-intro">
+                <div class="section-tag">Our services</div>
+                <h2 class="section-heading">Everything your brand <em>needs</em></h2>
+                <p>
+                    We offer a focused set of design and development services — each one
+                    refined over years of real-world projects.
+                </p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                    All services
+                </button>
+                <button class="filter-tab" data-filter="design">Design</button>
+                <button class="filter-tab" data-filter="development">
+                    Development
+                </button>
+                <button class="filter-tab" data-filter="strategy">Strategy</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Featured wide card -->
+                <div class="service-card featured" data-category="design">
+                    <div class="card-body">
+                        <i class="fa-solid fa-pen-ruler card-icon"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>
+                            Create intuitive and engaging user interfaces and experiences
+                            that enhance user satisfaction and drive measurable business
+                            results. We conduct user research, prototype, test, and iterate
+                            until the product truly works.
+                        </p>
+                        <ul class="card-features">
+                            <li>
+                                <i class="fa-solid fa-check"></i> User research & persona
+                                mapping
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i> Wireframing & interactive
+                                prototypes
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i> Usability testing &
+                                iteration
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i> Design system creation
+                            </li>
+                        </ul>
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                        </button>
+                    </div>
+                    <div class="card-visual">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="service-card" data-category="design">
+                    <i class="fa-solid fa-palette card-icon"></i>
+                    <h2>Graphic Design</h2>
+                    <p>
+                        Create visually appealing graphics that resonate with your
+                        audience and strengthen your brand identity across every
+                        touchpoint.
+                    </p>
+                    <ul class="card-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i> Print & digital collateral
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Social media graphics</li>
+                        <li><i class="fa-solid fa-check"></i> Packaging design</li>
+                    </ul>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                    </button>
+                </div>
+
+                <!-- Web Design -->
+                <div class="service-card accent" data-category="development">
+                    <i class="fa-solid fa-code card-icon"></i>
+                    <h2>Web Design & Dev</h2>
+                    <p>
+                        Design and develop responsive, user-friendly websites that
+                        effectively represent your brand online and convert visitors into
+                        customers.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Responsive design</li>
+                        <li><i class="fa-solid fa-check"></i> CMS integration</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Performance optimisation
+                        </li>
+                    </ul>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                    </button>
+                </div>
+
+                <!-- Brand Identity -->
+                <div class="service-card blue" data-category="strategy">
+                    <i class="fa-solid fa-trademark card-icon"></i>
+                    <h2>Brand Identity</h2>
+                    <p>
+                        Build a brand that stands out — logo, colour palette, typography,
+                        tone of voice, and the full visual language that defines who you
+                        are.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Logo & visual identity</li>
+                        <li><i class="fa-solid fa-check"></i> Brand guidelines</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Tone of voice & messaging
+                        </li>
+                    </ul>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                    </button>
+                </div>
+
+                <!-- Motion & Video -->
+                <div class="service-card accent" data-category="design">
+                    <i class="fa-solid fa-film card-icon"></i>
+                    <h2>Motion & Animation</h2>
+                    <p>
+                        Bring your brand to life with purposeful motion — from UI
+                        micro-interactions to full explainer videos and animated social
+                        content.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> UI micro-interactions</li>
+                        <li><i class="fa-solid fa-check"></i> Explainer animations</li>
+                        <li><i class="fa-solid fa-check"></i> Social video content</li>
+                    </ul>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                    </button>
+                </div>
+
+                <!-- Digital Strategy -->
+                <div class="service-card" data-category="strategy">
+                    <i class="fa-solid fa-chart-line card-icon"></i>
+                    <h2>Digital Strategy</h2>
+                    <p>
+                        Get a clear roadmap for your digital presence — from product
+                        positioning to channel strategy, we connect design decisions to
+                        business outcomes.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-check"></i> Competitive analysis</li>
+                        <li><i class="fa-solid fa-check"></i> Product roadmapping</li>
+                        <li><i class="fa-solid fa-check"></i> Growth frameworks</li>
+                    </ul>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i> Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── HOW IT WORKS ── -->
+        <section class="process-section">
+            <div class="process-inner">
+                <div class="process-header">
+                    <div class="section-tag">Our process</div>
+                    <h2 class="section-heading">How we work with you</h2>
+                    <p>
+                        Every engagement follows a clear, collaborative process — so you
+                        always know what's happening and why.
+                    </p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-num">01</div>
+                        <h3>Discovery</h3>
+                        <p>
+                            We dig into your goals, audience, competitors, and constraints
+                            before any design work begins.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">02</div>
+                        <h3>Strategy</h3>
+                        <p>
+                            We map out a clear plan — scope, timeline, deliverables, and
+                            success metrics agreed upfront.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">03</div>
+                        <h3>Design & Build</h3>
+                        <p>
+                            Iterative design and development with regular check-ins. You see
+                            progress, not just a final reveal.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">04</div>
+                        <h3>Launch & Support</h3>
+                        <p>
+                            We handle the launch and stay close for the first weeks to fix,
+                            tune, and improve.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PRICING ── -->
+        <section class="pricing-section">
+            <div class="section-intro">
+                <div class="section-tag">Pricing</div>
+                <h2 class="section-heading">Simple, transparent <em>pricing</em></h2>
+                <p>
+                    No surprise invoices. Pick the plan that fits your project, or reach
+                    out for a custom quote.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-plan">Starter</div>
+                    <div class="pricing-price">$999 <span>/ project</span></div>
+                    <div class="pricing-desc">
+                        Great for small businesses and solo founders getting started.
+                    </div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Logo & brand identity</li>
+                        <li><i class="fa-solid fa-check"></i> Up to 3 page website</li>
+                        <li><i class="fa-solid fa-check"></i> Mobile responsive</li>
+                        <li><i class="fa-solid fa-check"></i> 2 revision rounds</li>
+                        <li class="disabled">
+                            <i class="fa-solid fa-xmark"></i> UI/UX research
+                        </li>
+                        <li class="disabled">
+                            <i class="fa-solid fa-xmark"></i> Motion & animation
+                        </li>
+                    </ul>
+                    <button onclick="window.location.href = 'contact.html'">
+                        Get started
+                    </button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-plan">Growth</div>
+                    <div class="pricing-price">$2,499 <span>/ project</span></div>
+                    <div class="pricing-desc">
+                        For growing brands that need a complete digital presence.
+                    </div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i> Full brand identity system
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Up to 8 page website</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> UI/UX research & testing
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Mobile responsive</li>
+                        <li><i class="fa-solid fa-check"></i> 4 revision rounds</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> 30-day post-launch support
+                        </li>
+                    </ul>
+                    <button onclick="window.location.href = 'contact.html'">
+                        Get started
+                    </button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-plan">Enterprise</div>
+                    <div class="pricing-price">Custom</div>
+                    <div class="pricing-desc">
+                        For large-scale projects requiring a dedicated team and strategy.
+                    </div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Everything in Growth</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Dedicated project manager
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Motion & animation</li>
+                        <li>
+                            <i class="fa-solid fa-check"></i> Digital strategy & roadmap
+                        </li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
+                        <li><i class="fa-solid fa-check"></i> Ongoing retainer option</li>
+                    </ul>
+                    <button onclick="window.location.href = 'contact.html'">
+                        Let's talk
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq-section">
+            <div class="faq-inner">
+                <div class="faq-header">
+                    <div class="section-tag">FAQ</div>
+                    <h2 class="section-heading">Questions we get <em>a lot</em></h2>
+                    <p>
+                        Still not sure? Here are the answers to the most common things
+                        people ask before working with us.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does a typical project take?
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        It depends on scope. A brand identity project typically takes 2–3
+                        weeks. A full website design and build runs 4–8 weeks. We'll give
+                        you a clear timeline during our discovery call before anything
+                        kicks off.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you work with startups or only established businesses?
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Both. About half our clients are early-stage founders building
+                        from scratch. The other half are established businesses looking to
+                        refresh or scale their digital presence. We adapt our process to
+                        where you are.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What does the revision process look like?
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Each plan includes a defined number of revision rounds. A revision
+                        round means you review the work, give consolidated feedback, and
+                        we apply it. We find this structure leads to better outcomes and
+                        avoids endless back-and-forth.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer ongoing support after launch?
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. The Growth and Enterprise plans include post-launch support.
+                        We also offer monthly retainers for clients who need ongoing
+                        design work — updates, new pages, campaigns, and more.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do payments work?
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We typically split projects 50% upfront and 50% on completion. For
+                        larger engagements we use milestone-based payments. We accept bank
+                        transfer and major card payments.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section class="cta-section">
+            <h2>Ready to build something great?</h2>
+            <p>
+                Whether you're starting from scratch or levelling up what you already
+                have — let's make it happen.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn-primary">
+                    Get Started
+                </button>
+                <button class="btn-outline">
+                    View Our Portfolio
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Copyright © <span id="current-year"></span>
+            Ikechukwu Great. All rights reserved.
+            Last modified <span id="lastModified"></span>
+        </p> &nbsp;
+    </footer>
 </body>
+
 </html>

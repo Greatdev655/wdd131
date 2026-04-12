@@ -1,11 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Home page for PixelCraft Design Agency, showcasing design services, portfolio, and contact information." />
+    <meta name="author" content="Ikechukwu Great" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <script src="scripts/portfolio.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <title>Pixel craft home page</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="images/pixellogo.png" alt="logo" />
+            <!-- <h2>PixelCraft Design Agency</h2> -->
+        </div>
+
+        <nav>
+            <ul class="">
+                <li><a href="pixelcraft.html" >Home</a></li>
+                <li><a href="about.html">About us </a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active_link">Portfolio</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="portfolio-hero">
+            <div class="hero-tag">
+                <i class="fa-solid fa-circle-dot" style="font-size:8px;"></i> Our work
+            </div>
+            <h1>Projects we're <em>proud</em> to have built</h1>
+            <p>Every project here represents a real challenge, a real client, and real craft — from brand identity to
+                full digital products.</p>
+        </section>
+
+        <!-- ── STATS BAR ── -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">120<span>+</span></div>
+                <div class="stat-label">Projects delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500<span>+</span></div>
+                <div class="stat-label">Happy clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8<span>+</span></div>
+                <div class="stat-label">Years of craft</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Industry awards</div>
+            </div>
+        </div>
+
+        <!-- ── PROJECTS ── -->
+        <section class="portfolio-section">
+            <div class="section-intro">
+                <div class="section-tag">Portfolio</div>
+                <h2 class="section-heading">Work that <em>speaks</em> for itself</h2>
+                <p>Browse projects across branding, web design, UI/UX and motion — filter by category or search by name.
+                </p>
+            </div>
+
+            <div class="filter-tabs" id="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All work</button>
+                <button class="filter-tab" data-filter="branding">Branding</button>
+                <button class="filter-tab" data-filter="web">Web Design</button>
+                <button class="filter-tab" data-filter="uiux">UI/UX</button>
+                <button class="filter-tab" data-filter="motion">Motion</button>
+                <button class="filter-tab" data-filter="design">Graphic Design</button>
+            </div>
+
+            <div class="portfolio-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search projects..." />
+            </div>
+
+            <p class="results-count" id="results-count"><span id="count-num">0</span> projects</p>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- dynamically rendered by JS -->
+                <div class="empty-state" id="empty-state">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <p>No projects match your search. Try a different filter or keyword.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FEATURED CASE STUDY ── -->
+        <section class="casestudy-section">
+            <div class="casestudy-inner">
+                <div class="casestudy-visual">
+                    <div class="casestudy-visual-placeholder">
+                        <img src="images/foodbranddesign.webp" alt="verdant foods project" loading="lazy" />
+                        <!-- <i class="fa-solid fa-store"></i> -->
+                    </div>
+                </div>
+                <div class="casestudy-text">
+                    <div class="section-tag">Featured case study</div>
+                    <h2 class="section-heading">How we helped <em>Verdant Foods</em> grow 3× in 6 months</h2>
+                    <p>Verdant came to us with a great product but a brand that wasn't telling their story. We rebuilt
+                        their identity from the ground up — new logo, packaging, and a Shopify storefront designed
+                        around conversion.</p>
+                    <p>The result was a brand that finally matched the quality of their product, and a website that
+                        turned browsers into buyers.</p>
+                    <div class="casestudy-results">
+                        <div class="result-item">
+                            <div class="result-num">3×</div>
+                            <div class="result-lbl">Revenue growth</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-num">+68%</div>
+                            <div class="result-lbl">Conversion rate</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-num">12wk</div>
+                            <div class="result-lbl">Delivery time</div>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="window.location.href='contact.html'">
+                        <i class="fa-solid fa-arrow-right"></i> Start your project
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── TESTIMONIALS ── -->
+        <section class="testimonials-section">
+            <div class="section-intro">
+                <div class="section-tag">Client love</div>
+                <h2 class="section-heading">What our clients <em>say</em></h2>
+            </div>
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- rendered by JS -->
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section class="cta-section">
+            <h2>Like what you see?</h2>
+            <p>Let's build something you're proud of. Tell us about your project and we'll get back to you within 24
+                hours.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="window.location.href='contact.html'">Start a project</button>
+                <button class="btn-outline" onclick="window.location.href='services.html'">View our services</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── LIGHTBOX ── -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-box" id="lightbox-box">
+            <!-- filled by JS -->
+        </div>
+    </div>
+    </main>
+
+
+
+
+    <footer>
+        <p>
+            Copyright © <span id="current-year"></span>
+            Ikechukwu Great. All rights reserved.
+            Last modified <span id="lastModified"></span>
+        </p> &nbsp;
+    </footer>
+
 </body>
+
 </html>
